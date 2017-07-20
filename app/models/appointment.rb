@@ -68,7 +68,7 @@ class Appointment < ActiveRecord::Base
   end
  
  def self.search(search)
-     where("comments LIKE ?", "%#{search}%")
+     where("patientname LIKE ?", "%#{search}%")
   end
 # handle_asynchronously :reminder, :run_at => Proc.new { |i| i.when_to_run }
 
